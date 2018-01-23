@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3CC93A8F55FEEE8BCED8F24 /* libPods-hhhh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB4A4AE65E00D5B5EB0616D /* libPods-hhhh.a */; };
 		D76C60A920172135004EAD2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60A820172135004EAD2D /* main.m */; };
 		D76C60AC20172135004EAD2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60AB20172135004EAD2D /* AppDelegate.m */; };
 		D76C60AF20172135004EAD2D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60AE20172135004EAD2D /* ViewController.m */; };
@@ -15,6 +16,13 @@
 		D76C60B720172135004EAD2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D76C60B520172135004EAD2D /* LaunchScreen.storyboard */; };
 		D76C60C220172135004EAD2D /* hhhhTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60C120172135004EAD2D /* hhhhTests.m */; };
 		D76C60CD20172135004EAD2D /* hhhhUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60CC20172135004EAD2D /* hhhhUITests.m */; };
+		D76C60E6201721C9004EAD2D /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60DB201721C9004EAD2D /* FCFileManager.m */; };
+		D76C60E7201721C9004EAD2D /* FlLocalStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60DD201721C9004EAD2D /* FlLocalStoreManager.m */; };
+		D76C60E8201721C9004EAD2D /* HJGBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60DF201721C9004EAD2D /* HJGBottomTableViewCell.m */; };
+		D76C60E9201721C9004EAD2D /* HJGModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60E1201721C9004EAD2D /* HJGModel.m */; };
+		D76C60EA201721C9004EAD2D /* HJGTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60E3201721C9004EAD2D /* HJGTableViewCell.m */; };
+		D76C60EB201721C9004EAD2D /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C60E5201721C9004EAD2D /* UIViewAdditions.m */; };
+		D7D754C6201730EB00A82F6E /* HJGTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D754C5201730EB00A82F6E /* HJGTabController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		029B675AB2B5557C6EFE7F50 /* Pods-hhhh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hhhh.release.xcconfig"; path = "Pods/Target Support Files/Pods-hhhh/Pods-hhhh.release.xcconfig"; sourceTree = "<group>"; };
+		528937F783F19A92FB30AF60 /* Pods-hhhh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hhhh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hhhh/Pods-hhhh.debug.xcconfig"; sourceTree = "<group>"; };
 		D76C60A420172135004EAD2D /* hhhh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hhhh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76C60A820172135004EAD2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D76C60AA20172135004EAD2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +61,22 @@
 		D76C60C820172135004EAD2D /* hhhhUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hhhhUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D76C60CC20172135004EAD2D /* hhhhUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hhhhUITests.m; sourceTree = "<group>"; };
 		D76C60CE20172135004EAD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D76C60DA201721C9004EAD2D /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		D76C60DB201721C9004EAD2D /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
+		D76C60DC201721C9004EAD2D /* FlLocalStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlLocalStoreManager.h; sourceTree = "<group>"; };
+		D76C60DD201721C9004EAD2D /* FlLocalStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlLocalStoreManager.m; sourceTree = "<group>"; };
+		D76C60DE201721C9004EAD2D /* HJGBottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGBottomTableViewCell.h; sourceTree = "<group>"; };
+		D76C60DF201721C9004EAD2D /* HJGBottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGBottomTableViewCell.m; sourceTree = "<group>"; };
+		D76C60E0201721C9004EAD2D /* HJGModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGModel.h; sourceTree = "<group>"; };
+		D76C60E1201721C9004EAD2D /* HJGModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGModel.m; sourceTree = "<group>"; };
+		D76C60E2201721C9004EAD2D /* HJGTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGTableViewCell.h; sourceTree = "<group>"; };
+		D76C60E3201721C9004EAD2D /* HJGTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGTableViewCell.m; sourceTree = "<group>"; };
+		D76C60E4201721C9004EAD2D /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
+		D76C60E5201721C9004EAD2D /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
+		D7D754C4201730EB00A82F6E /* HJGTabController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGTabController.h; sourceTree = "<group>"; };
+		D7D754C5201730EB00A82F6E /* HJGTabController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGTabController.m; sourceTree = "<group>"; };
+		D7E506CA201722E40086AB19 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		DDB4A4AE65E00D5B5EB0616D /* libPods-hhhh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hhhh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CC93A8F55FEEE8BCED8F24 /* libPods-hhhh.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D01CD05F6C872F86D1E0EA83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				528937F783F19A92FB30AF60 /* Pods-hhhh.debug.xcconfig */,
+				029B675AB2B5557C6EFE7F50 /* Pods-hhhh.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D76C609B20172135004EAD2D = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +121,8 @@
 				D76C60C020172135004EAD2D /* hhhhTests */,
 				D76C60CB20172135004EAD2D /* hhhhUITests */,
 				D76C60A520172135004EAD2D /* Products */,
+				D01CD05F6C872F86D1E0EA83 /* Pods */,
+				EE1B2C764CE577CBB9AC1619 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +139,18 @@
 		D76C60A620172135004EAD2D /* hhhh */ = {
 			isa = PBXGroup;
 			children = (
+				D76C60DA201721C9004EAD2D /* FCFileManager.h */,
+				D76C60DB201721C9004EAD2D /* FCFileManager.m */,
+				D76C60DC201721C9004EAD2D /* FlLocalStoreManager.h */,
+				D76C60DD201721C9004EAD2D /* FlLocalStoreManager.m */,
+				D76C60DE201721C9004EAD2D /* HJGBottomTableViewCell.h */,
+				D76C60DF201721C9004EAD2D /* HJGBottomTableViewCell.m */,
+				D76C60E0201721C9004EAD2D /* HJGModel.h */,
+				D76C60E1201721C9004EAD2D /* HJGModel.m */,
+				D76C60E2201721C9004EAD2D /* HJGTableViewCell.h */,
+				D76C60E3201721C9004EAD2D /* HJGTableViewCell.m */,
+				D76C60E4201721C9004EAD2D /* UIViewAdditions.h */,
+				D76C60E5201721C9004EAD2D /* UIViewAdditions.m */,
 				D76C60AA20172135004EAD2D /* AppDelegate.h */,
 				D76C60AB20172135004EAD2D /* AppDelegate.m */,
 				D76C60AD20172135004EAD2D /* ViewController.h */,
@@ -110,6 +160,9 @@
 				D76C60B520172135004EAD2D /* LaunchScreen.storyboard */,
 				D76C60B820172135004EAD2D /* Info.plist */,
 				D76C60A720172135004EAD2D /* Supporting Files */,
+				D7E506CA201722E40086AB19 /* Header.h */,
+				D7D754C4201730EB00A82F6E /* HJGTabController.h */,
+				D7D754C5201730EB00A82F6E /* HJGTabController.m */,
 			);
 			path = hhhh;
 			sourceTree = "<group>";
@@ -140,6 +193,14 @@
 			path = hhhhUITests;
 			sourceTree = "<group>";
 		};
+		EE1B2C764CE577CBB9AC1619 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDB4A4AE65E00D5B5EB0616D /* libPods-hhhh.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D76C60D120172135004EAD2D /* Build configuration list for PBXNativeTarget "hhhh" */;
 			buildPhases = (
+				C89A54C9CCACC44DB53796FD /* [CP] Check Pods Manifest.lock */,
 				D76C60A020172135004EAD2D /* Sources */,
 				D76C60A120172135004EAD2D /* Frameworks */,
 				D76C60A220172135004EAD2D /* Resources */,
+				1C61B8E10294C02450D3237D /* [CP] Embed Pods Frameworks */,
+				6473370D1BA6110E7E9229EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,13 +335,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C61B8E10294C02450D3237D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hhhh/Pods-hhhh-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6473370D1BA6110E7E9229EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-hhhh/Pods-hhhh-resources.sh",
+				"${PODS_ROOT}/BRPickerView/BRPickerView/AddressPickerView/BRCity.plist",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-hhhh/Pods-hhhh-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C89A54C9CCACC44DB53796FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hhhh-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D76C60A020172135004EAD2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D76C60E9201721C9004EAD2D /* HJGModel.m in Sources */,
+				D76C60EA201721C9004EAD2D /* HJGTableViewCell.m in Sources */,
+				D76C60EB201721C9004EAD2D /* UIViewAdditions.m in Sources */,
 				D76C60AF20172135004EAD2D /* ViewController.m in Sources */,
 				D76C60AC20172135004EAD2D /* AppDelegate.m in Sources */,
+				D76C60E7201721C9004EAD2D /* FlLocalStoreManager.m in Sources */,
+				D76C60E6201721C9004EAD2D /* FCFileManager.m in Sources */,
+				D7D754C6201730EB00A82F6E /* HJGTabController.m in Sources */,
+				D76C60E8201721C9004EAD2D /* HJGBottomTableViewCell.m in Sources */,
 				D76C60A920172135004EAD2D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,9 +553,11 @@
 		};
 		D76C60D220172135004EAD2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528937F783F19A92FB30AF60 /* Pods-hhhh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RV5A8A5FTU;
+				GCC_PREFIX_HEADER = /Users/dev/Downloads/hhhh/hhhh/Header.h;
 				INFOPLIST_FILE = hhhh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruok.co.hhhh;
@@ -437,9 +567,11 @@
 		};
 		D76C60D320172135004EAD2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 029B675AB2B5557C6EFE7F50 /* Pods-hhhh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RV5A8A5FTU;
+				GCC_PREFIX_HEADER = /Users/dev/Downloads/hhhh/hhhh/Header.h;
 				INFOPLIST_FILE = hhhh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruok.co.hhhh;
@@ -516,6 +648,7 @@
 				D76C60D320172135004EAD2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D76C60D420172135004EAD2D /* Build configuration list for PBXNativeTarget "hhhhTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +657,7 @@
 				D76C60D620172135004EAD2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D76C60D720172135004EAD2D /* Build configuration list for PBXNativeTarget "hhhhUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +666,7 @@
 				D76C60D920172135004EAD2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
