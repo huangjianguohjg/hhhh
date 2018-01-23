@@ -387,38 +387,142 @@
 - (void)timeButClick:(UIButton *)but{
     
     NSArray *arr = @[
-                     @"牛1----------------14",
-                     @"牛2----------------15",
-                     @"牛3----------------16",
-                     @"牛4----------------17",
-                     @"牛5----------------18",
-                     @"牛6----------------19",
-                     @"牛7----------------20",
-                     @"牛8----------------21",
-                     @"牛9----------------22",
-                     @"牛牛10----------------23",
-                     @"牛牛J----------------24",
-                     @"牛牛Q----------------25",
-                     @"牛牛K----------------26",
-                     @"无牛-1----------------1",
-                     @"无牛-2----------------2",
-                     @"无牛-3----------------3",
-                     @"无牛-4----------------4",
-                     @"无牛-5----------------5",
-                     @"无牛-6----------------6",
-                     @"无牛-7----------------7",
-                     @"无牛-8----------------8",
-                     @"无牛-9----------------9",
-                     @"无牛-10----------------10",
-                     @"无牛-J----------------11",
-                     @"无牛-Q----------------12",
-                     @"无牛-K----------------13",];
+                     @"牛1",
+                     @"牛2",
+                     @"牛3",
+                     @"牛4",
+                     @"牛5",
+                     @"牛6",
+                     @"牛7",
+                     @"牛8",
+                     @"牛9",
+                     @"牛牛10",
+                     @"牛牛J",
+                     @"牛牛Q",
+                     @"牛牛K",
+                     @"无牛-1",
+                     @"无牛-2",
+                     @"无牛-3",
+                     @"无牛-4",
+                     @"无牛-5",
+                     @"无牛-6",
+                     @"无牛-7",
+                     @"无牛-8",
+                     @"无牛-9",
+                     @"无牛-10",
+                     @"无牛-J",
+                     @"无牛-Q",
+                     @"无牛-K",];
     
     @weakify_self;
     [BRStringPickerView showStringPickerWithTitle:@"飞式牛牛记牌器" dataSource:arr defaultSelValue:@"牛1----------------14" isAutoSelect:NO resultBlock:^(id selectValue) {
         @strongify_self;
         //        NSLog(@"%@",selectValue);
         
+        
+        if ([selectValue isEqualToString:@"牛1"]) {
+            selectValue =  @"牛1----------------14";
+        }
+        
+        if ([selectValue isEqualToString:@"牛2"]) {
+            selectValue =@"牛2----------------15";
+        }
+        
+        if ([selectValue isEqualToString:@"牛3"]) {
+            selectValue =@"牛3----------------16";
+        }
+        
+        if ([selectValue isEqualToString:@"牛4"]) {
+            selectValue =@"牛4----------------17";
+        }
+        
+        if ([selectValue isEqualToString:@"牛5"]) {
+            selectValue =@"牛5----------------18";
+        }
+        
+        if ([selectValue isEqualToString:@"牛6"]) {
+            selectValue =@"牛6----------------19";
+        }
+        
+        if ([selectValue isEqualToString:@"牛7"]) {
+            selectValue =@"牛7----------------20";
+        }
+        
+        if ([selectValue isEqualToString:@"牛8"]) {
+            selectValue =@"牛8----------------21";
+        }
+        
+        if ([selectValue isEqualToString:@"牛9"]) {
+            selectValue =@"牛9----------------22";
+        }
+        
+        if ([selectValue isEqualToString:@"牛牛10"]) {
+            selectValue =@"牛牛10----------------23";
+        }
+        
+        if ([selectValue isEqualToString:@"牛牛J"]) {
+            selectValue =@"牛牛J----------------24";
+        }
+        
+        if ([selectValue isEqualToString:@"牛牛Q"]) {
+            selectValue =@"牛牛Q----------------25";
+        }
+        
+        if ([selectValue isEqualToString:@"牛牛K"]) {
+            selectValue =@"牛牛K----------------26";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-1"]) {
+            selectValue =@"无牛-1----------------1";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-2"]) {
+            selectValue =@"无牛-2----------------2";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-3"]) {
+            selectValue =@"无牛-3----------------3";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-4"]) {
+            selectValue =@"无牛-4----------------4";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-5"]) {
+            selectValue =@"无牛-5----------------5";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-6"]) {
+            selectValue =@"无牛-6----------------6";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-7"]) {
+            selectValue =@"无牛-7----------------7";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-8"]) {
+            selectValue =@"无牛-8----------------8";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-9"]) {
+            selectValue =@"无牛-9----------------9";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-10"]) {
+            selectValue =@"无牛-10----------------10";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-J"]) {
+            selectValue =@"无牛-J----------------11";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-Q"]) {
+            selectValue =@"无牛-Q----------------12";
+        }
+        
+        if ([selectValue isEqualToString:@"无牛-K"]) {
+            selectValue =@"无牛-K----------------13";
+        }
         
         
         HJGTableViewCell *cell = (HJGTableViewCell *)[[but superview] superview];
