@@ -66,7 +66,7 @@
 {
     if (!_lineView) {
         UIView * theView = [[UIView alloc] init];
-        theView.backgroundColor = [UIColor redColor];
+        theView.backgroundColor = [UIColor blueColor];
         [self.contentView addSubview:theView];
         [theView makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.equalTo(self.contentView);

@@ -64,7 +64,7 @@
         [theView addTarget:self action:@selector(cleanButClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:theView];
         [theView makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view).offset(25);
+            make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(80, 70));
             make.left.equalTo(self.changeBut.right);
         }];
@@ -98,7 +98,7 @@
         [theView addTarget:self action:@selector(saveButClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:theView];
         [theView makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view).offset(25);
+            make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(80, 70));
             make.right.equalTo(self.addBut.left);
         }];
@@ -116,7 +116,7 @@
         [theView addTarget:self action:@selector(changeButClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:theView];
         [theView makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view).offset(25);
+            make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(120, 70));
             make.left.equalTo(self.view);
         }];
@@ -154,7 +154,7 @@
         [theView addTarget:self action:@selector(addButClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:theView];
         [theView makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.view).offset(25);
+            make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(120, 70));
             make.right.equalTo(self.view);
         }];
@@ -193,7 +193,7 @@
 - (UITableView *)rootTableView
 {
     if (!_rootTableView) {
-        UITableView * theView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, WIDTH, HEIGHT - 70)];
+        UITableView * theView = [[UITableView alloc] initWithFrame:CGRectMake(0, 75, WIDTH, HEIGHT - 70)];
         theView.delegate = self;
         theView.dataSource = self;
         [self.view addSubview:theView];
@@ -358,20 +358,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    return 40;
+    return 20;
 }
 
 - (UIView *)getHeaderView{
     
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 40)];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 20)];
     view.backgroundColor = [UIColor whiteColor];
-    UILabel *zhuoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, WIDTH - 80, 40)];
+    UILabel *zhuoLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, WIDTH - 80, 20)];
     zhuoLab.textAlignment = NSTextAlignmentCenter;
     zhuoLab.text = @"           桌1       桌2      桌3    桌4     桌5";
     [view addSubview:zhuoLab];
     
     
-    UILabel *zhuang = [[UILabel alloc]initWithFrame:CGRectMake(WIDTH - 80, 0, 80, 40)];
+    UILabel *zhuang = [[UILabel alloc]initWithFrame:CGRectMake(WIDTH - 80, 0, 80, 20)];
     zhuang.textAlignment = NSTextAlignmentCenter;
     zhuang.text = @"庄家";
     [view addSubview:zhuang];
