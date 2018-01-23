@@ -66,7 +66,8 @@
         [theView makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(80, 70));
-            make.left.equalTo(self.changeBut.right);
+//            make.left.equalTo(self.changeBut.right);
+            make.left.equalTo(self.saveBut.right);
         }];
         _cleanBut = theView;
     }
@@ -103,7 +104,8 @@
         [theView makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(80, 70));
-            make.right.equalTo(self.addBut.left);
+//            make.right.equalTo(self.addBut.left);
+            make.left.equalTo(self.changeBut.right);
         }];
         _saveBut = theView;
     }
@@ -114,7 +116,7 @@
 {
     if (!_changeBut) {
         UIButton * theView = [[UIButton alloc] init];
-        [theView setTitle:@"切换新牌手" forState:0];
+        [theView setTitle:@"新牌手" forState:0];
         [theView setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [theView addTarget:self action:@selector(changeButClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:theView];
