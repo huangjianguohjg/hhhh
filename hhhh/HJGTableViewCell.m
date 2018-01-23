@@ -66,7 +66,7 @@
 {
     if (!_lineView) {
         UIView * theView = [[UIView alloc] init];
-        theView.backgroundColor = [UIColor blueColor];
+        theView.backgroundColor = [UIColor redColor];
         [self.contentView addSubview:theView];
         [theView makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.equalTo(self.contentView);
@@ -91,7 +91,12 @@
     
     if ([model.change intValue] ==1) {
         self.lineView.alpha = 1.f;
-    }else{
+        self.lineView.backgroundColor = [UIColor redColor];
+    }else if ([model.change intValue] == 2){
+        self.lineView.alpha = 1.f;
+        self.lineView.backgroundColor = [UIColor blueColor];
+    }
+    else{
         self.lineView.alpha = 0.f;
     }
     

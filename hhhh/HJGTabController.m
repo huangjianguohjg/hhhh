@@ -48,7 +48,7 @@
 - (void)getTitleData{
     
     for (int i = 0; i < 100; i ++ ) {
-        NSString *str = [NSString stringWithFormat:@"赌桌台%d号",i + 1];
+        NSString *str = [NSString stringWithFormat:@"台%d号",i + 1];
         [self.titleModelArr addObject:str];
     }
     

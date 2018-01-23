@@ -84,7 +84,10 @@
 
 - (void)saveButClick{
     
-    [FlLocalStoreManager saveUserInfo:self.modelArr];
+    HJGModel *model = [[HJGModel alloc]init];
+    model.change = @"2";
+    [self.modelArr addObject:model];
+    [self.rootTableView reloadData];
     
 }
 
@@ -93,7 +96,7 @@
 {
     if (!_saveBut) {
         UIButton * theView = [[UIButton alloc] init];
-        [theView setTitle:@"保存" forState:UIControlStateNormal];
+        [theView setTitle:@"换牌" forState:UIControlStateNormal];
         [theView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [theView addTarget:self action:@selector(saveButClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:theView];
@@ -179,7 +182,7 @@
     [self rootTableView];
     
     [self cleanBut];
-    //    [self saveBut];
+        [self saveBut];
     
     NSLog(@"========================%@",[FlLocalStoreManager getUserInfo]);
     
