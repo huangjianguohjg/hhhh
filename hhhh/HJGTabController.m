@@ -12,10 +12,23 @@
 
 @property (nonatomic, strong) NSMutableArray *titleModelArr;
 
+@property (nonatomic, strong) NSMutableArray *mostArr;
+
 
 @end
 
 @implementation HJGTabController
+
+- (NSMutableArray *)mostArr{
+    
+    if (!_mostArr) {
+        _mostArr = [NSMutableArray array];
+    }
+    return _mostArr;
+    
+    
+}
+
 - (NSMutableArray *)titleModelArr{
     if (!_titleModelArr) {
         _titleModelArr = [NSMutableArray array];
@@ -27,7 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    [self configNot];
     [self configView];
     
     [self getTitleData];
@@ -44,12 +57,35 @@
     
 }
 
+
+- (void)configNot{
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushData:) name:@"fff" object:nil];
+    
+    
+}
+
+
+- (void)pushData:(NSNotification *)obj{
+    
+    NSLog(@"%@",obj.object);
+    
+    [self.mostArr replaceObjectAtIndex:self.tabBar.curIndex withObject:obj.object];
+    
+}
+
 #pragma mark - 获取标题数据
 - (void)getTitleData{
     
     for (int i = 0; i < 100; i ++ ) {
         NSString *str = [NSString stringWithFormat:@"台%d号",i + 1];
         [self.titleModelArr addObject:str];
+    }
+    
+    
+    for (int i = 0; i < 100; i ++) {
+        [self.mostArr addObject:@""];
     }
     
     [self loadData];
@@ -70,6 +106,7 @@
 
 - (UIViewController *)tabPagerController:(TYTabPagerController *)tabPagerController controllerForIndex:(NSInteger)index prefetching:(BOOL)prefetching {
     ViewController *vc = [[ViewController alloc]init];
+    vc.totalModelArr = [self.mostArr objectAtIndex:index];
     return vc;
 }
 

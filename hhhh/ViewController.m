@@ -55,6 +55,26 @@
 }
 
 
+- (void)setTotalModelArr:(NSArray *)totalModelArr{
+    
+    _totalModelArr = totalModelArr;
+    
+//    [self.modelArr addObjectsFromArray:totalModelArr];
+//
+//    [self.rootTableView reloadData];
+    
+    
+    if ([totalModelArr isKindOfClass:[NSArray class]]) {
+        
+        [self.modelArr addObjectsFromArray:totalModelArr];
+        
+        [self.rootTableView reloadData];
+        
+    }
+    
+}
+
+
 - (UIButton *)cleanBut
 {
     if (!_cleanBut) {
@@ -573,7 +593,7 @@
         [self.rootTableView reloadData];
     }];
     
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"fff" object:self.modelArr];
 }
 
 - (void)compareBut:(UIButton *)but xianText:(NSString *)xianText zhuangText:(NSString *)zhuangText
