@@ -77,22 +77,26 @@
     return _lineView;
 }
 
-- (void)setModel:(HJGModel *)model{
+- (void)setModel:(NSMutableDictionary *)model{
     
     _model = model;
     
-    [self.firstBut setTitle:[self sub_str:model.Number_1] forState:UIControlStateNormal];
-    [self.secondBut setTitle:[self sub_str:model.Number_2] forState:UIControlStateNormal];
-    [self.thirdBut setTitle:[self sub_str:model.Number_3] forState:UIControlStateNormal];
-    [self.forthBut setTitle:[self sub_str:model.Number_4] forState:UIControlStateNormal];
-    [self.fifthBut setTitle:[self sub_str:model.Number_5] forState:UIControlStateNormal];
-//    [self.sixBut setTitle:model.Number_6 forState:UIControlStateNormal];
-    [self.zhuangBut setTitle:[self sub_str:model.Number_zhuang] forState:UIControlStateNormal];
+    if ([model isKindOfClass:[NSString class]]) {
+        return;
+    }
     
-    if ([model.change intValue] ==1) {
+    [self.firstBut setTitle:[self sub_str:model[@"Number_1"]] forState:UIControlStateNormal];
+    [self.secondBut setTitle:[self sub_str:model[@"Number_2"]] forState:UIControlStateNormal];
+    [self.thirdBut setTitle:[self sub_str:model[@"Number_3"]] forState:UIControlStateNormal];
+    [self.forthBut setTitle:[self sub_str:model[@"Number_4"]] forState:UIControlStateNormal];
+    [self.fifthBut setTitle:[self sub_str:model[@"Number_5"]] forState:UIControlStateNormal];
+//    [self.sixBut setTitle:model.Number_6 forState:UIControlStateNormal];
+    [self.zhuangBut setTitle:[self sub_str:model[@"Number_zhuang"]] forState:UIControlStateNormal];
+    
+    if ([model[@"change"] intValue] ==1) {
         self.lineView.alpha = 1.f;
         self.lineView.backgroundColor = [UIColor redColor];
-    }else if ([model.change intValue] == 2){
+    }else if ([model[@"change"] intValue] == 2){
         self.lineView.alpha = 1.f;
         self.lineView.backgroundColor = [UIColor blueColor];
     }
@@ -100,11 +104,11 @@
         self.lineView.alpha = 0.f;
     }
     
-    [self compareBut:self.firstBut xianText:model.Number_1 zhuangText:model.Number_zhuang];
-    [self compareBut:self.secondBut xianText:model.Number_2 zhuangText:model.Number_zhuang];
-    [self compareBut:self.thirdBut xianText:model.Number_3 zhuangText:model.Number_zhuang];
-    [self compareBut:self.forthBut xianText:model.Number_4 zhuangText:model.Number_zhuang];
-    [self compareBut:self.fifthBut xianText:model.Number_5 zhuangText:model.Number_zhuang];
+    [self compareBut:self.firstBut xianText:model[@"Number_1"] zhuangText:model[@"Number_zhuang"]];
+    [self compareBut:self.secondBut xianText:model[@"Number_2"] zhuangText:model[@"Number_zhuang"]];
+    [self compareBut:self.thirdBut xianText:model[@"Number_3"] zhuangText:model[@"Number_zhuang"]];
+    [self compareBut:self.forthBut xianText:model[@"Number_4"] zhuangText:model[@"Number_zhuang"]];
+    [self compareBut:self.fifthBut xianText:model[@"Number_5"] zhuangText:model[@"Number_zhuang"]];
 //    [self compareBut:self.zhuangBut xianText:model.Number_zhuang zhuangText:model.Number_zhuang];
 
     self.zhuangBut.layer.borderColor = [UIColor greenColor].CGColor;

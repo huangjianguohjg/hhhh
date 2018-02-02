@@ -271,7 +271,7 @@
 				TargetAttributes = {
 					D76C60A320172135004EAD2D = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = RV5A8A5FTU;
+						DevelopmentTeam = YLHVZ2B9J7;
 						ProvisioningStyle = Automatic;
 					};
 					D76C60BC20172135004EAD2D = {
@@ -556,11 +556,11 @@
 			baseConfigurationReference = 528937F783F19A92FB30AF60 /* Pods-hhhh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RV5A8A5FTU;
+				DEVELOPMENT_TEAM = YLHVZ2B9J7;
 				GCC_PREFIX_HEADER = /Users/dev/Downloads/hhhh/hhhh/Header.h;
 				INFOPLIST_FILE = hhhh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruok.co.hhhh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxhl.cowh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -570,11 +570,11 @@
 			baseConfigurationReference = 029B675AB2B5557C6EFE7F50 /* Pods-hhhh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RV5A8A5FTU;
+				DEVELOPMENT_TEAM = YLHVZ2B9J7;
 				GCC_PREFIX_HEADER = /Users/dev/Downloads/hhhh/hhhh/Header.h;
 				INFOPLIST_FILE = hhhh/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruok.co.hhhh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wxhl.cowh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -37,7 +37,7 @@
 
 @property (nonatomic, weak) UIButton *zhuangBut;
 
-@property (nonatomic, strong) HJGModel *model;
+@property (nonatomic, strong) NSMutableDictionary *model;
 
 @property (nonatomic, weak) UIView *lineView;
 

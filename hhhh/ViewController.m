@@ -59,10 +59,6 @@
     
     _totalModelArr = totalModelArr;
     
-//    [self.modelArr addObjectsFromArray:totalModelArr];
-//
-//    [self.rootTableView reloadData];
-    
     
     if ([totalModelArr isKindOfClass:[NSArray class]]) {
         
@@ -86,7 +82,6 @@
         [theView makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(80, 70));
-//            make.left.equalTo(self.changeBut.right);
             make.left.equalTo(self.saveBut.right);
         }];
         _cleanBut = theView;
@@ -96,8 +91,6 @@
 
 - (void)cleanButClick{
     
-    //    [FlLocalStoreManager removeUserInfo];
-    
     [self.modelArr removeAllObjects];
     [self.rootTableView reloadData];
 }
@@ -105,9 +98,13 @@
 
 - (void)saveButClick{
     
-    HJGModel *model = [[HJGModel alloc]init];
-    model.change = @"2";
-    [self.modelArr addObject:model];
+//    HJGModel *model = [[HJGModel alloc]init];
+//    model.change = @"2";
+    
+//    [self.modelArr addObject:model];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"change"] = @"2";
+    [self.modelArr addObject:dic];
     [self.rootTableView reloadData];
     
 }
@@ -124,7 +121,6 @@
         [theView makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.view).offset(5);
             make.size.equalTo(CGSizeMake(80, 70));
-//            make.right.equalTo(self.addBut.left);
             make.left.equalTo(self.changeBut.right);
         }];
         _saveBut = theView;
@@ -152,11 +148,16 @@
 
 - (void)changeButClick{
     
-    HJGModel *model = [[HJGModel alloc]init];
-    model.change = @"1";
-    [self.modelArr addObject:model];
-    [self.rootTableView reloadData];
+//    HJGModel *model = [[HJGModel alloc]init];
+//    model.change = @"1";
+//    [self.modelArr addObject:model];
+//    [self.rootTableView reloadData];
+
     
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"change"] = @"1";
+    [self.modelArr addObject:dic];
+    [self.rootTableView reloadData];
 }
 
 - (NSMutableArray *)modelArr{
@@ -190,8 +191,13 @@
 
 - (void)addButClick{
     
-    HJGModel *model = [[HJGModel alloc]init];
-    [self.modelArr addObject:model];
+//    HJGModel *model = [[HJGModel alloc]init];
+//    [self.modelArr addObject:model];
+//    [self.rootTableView reloadData];
+    
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    [self.modelArr addObject:dic];
     [self.rootTableView reloadData];
     
 }
@@ -206,7 +212,6 @@
     [self cleanBut];
         [self saveBut];
     
-    NSLog(@"========================%@",[FlLocalStoreManager getUserInfo]);
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -262,14 +267,6 @@
     }
     
     HJGTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    //    [cell.firstBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    //    [cell.secondBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    //    [cell.thirdBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    //    [cell.forthBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    //    [cell.fifthBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    ////    [cell.sixBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    //    [cell.zhuangBut addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
-    
     
     [cell.firstBut addTarget:self action:@selector(doubleClick:forEvent:) forControlEvents:UIControlEventTouchDownRepeat];
     [cell.firstBut  addTarget:self action:@selector(singleClick:forEvent:) forControlEvents:UIControlEventTouchDown];
@@ -294,11 +291,6 @@
     
     
     cell.model = [self.modelArr objectAtIndex:indexPath.row];
-    //    cell.firstBut.layer.borderColor = RGB(198, 198, 198).CGColor;
-    //    cell.secondBut.layer.borderColor = RGB(198, 198, 198).CGColor;
-    //    cell.thirdBut.layer.borderColor = RGB(198, 198, 198).CGColor;
-    //    cell.forthBut.layer.borderColor = RGB(198, 198, 198).CGColor;
-    //    cell.fifthBut.layer.borderColor = RGB(198, 198, 198).CGColor;
     cell.preLab.text = [NSString stringWithFormat:@"第%ld局",indexPath.row + 1];
     cell.selectionStyle = 0;
     return cell;
@@ -324,23 +316,23 @@
     
     NSIndexPath *indexPa = [self.rootTableView indexPathForCell:cell];
     
-    HJGModel *model = [self.modelArr objectAtIndex:indexPa.row];
+    NSMutableDictionary *model = [self.modelArr objectAtIndex:indexPa.row];
     
     if (button.tag == 1) {
-        model.Number_1 = @"";
+        model[@"Number_1"] = @"";
     }else if (button.tag == 2){
-        model.Number_2 = @"";
+        model[@"Number_2"] = @"";
     }else if (button.tag == 3){
-        model.Number_3 = @"";
+        model[@"Number_3"] = @"";
     }else if (button.tag == 4){
-        model.Number_4 = @"";
+        model[@"Number_4"] = @"";
     }else if (button.tag == 5){
-        model.Number_5 = @"";
+        model[@"Number_5"] = @"";
     }else if (button.tag == 6){
-        model.Number_6 = @"";
+        model[@"Number_6"] = @"";
     }else if (button.tag == 7){
-        model.Number_zhuang = @"";
-        NSLog(@"000000_%@",model.Number_zhuang);
+        model[@"Number_zhuang"] = @"";
+        NSLog(@"000000_%@",model[@"Number_zhuang"]);
         
     }
     
@@ -551,49 +543,56 @@
         
         NSIndexPath *indexPa = [self.rootTableView indexPathForCell:cell];
         
-        HJGModel *model = [self.modelArr objectAtIndex:indexPa.row];
+        NSMutableDictionary *model = [self.modelArr objectAtIndex:indexPa.row];
+        if ([model isKindOfClass:[NSString class]]) {
+            [self.modelArr replaceObjectAtIndex:indexPa.row withObject:[NSMutableDictionary dictionary]];
+            model = [self.modelArr objectAtIndex:indexPa.row];
+        }else{
+            
+            model = [self.modelArr objectAtIndex:indexPa.row];
+        }
         if (but.tag == 1) {
-            model.Number_1 = selectValue;
-            if (model.Number_zhuang.length > 0) {
-                [self compareBut:but xianText:selectValue zhuangText:model.Number_zhuang];
+            model[@"Number_1"] = selectValue;
+            if ([model[@"Number_zhuang"] length] > 0) {
+                [self compareBut:but xianText:selectValue zhuangText:model[@"Number_zhuang"]];
             }
         }else if (but.tag == 2){
-            model.Number_2 = selectValue;
-            if (model.Number_zhuang.length > 0) {
-                [self compareBut:but xianText:selectValue zhuangText:model.Number_zhuang];
+            model[@"Number_2"] = selectValue;
+            if ([model[@"Number_zhuang"] length] > 0) {
+                [self compareBut:but xianText:selectValue zhuangText:model[@"Number_zhuang"]];
             }
         }else if (but.tag == 3){
-            model.Number_3 = selectValue;
-            if (model.Number_zhuang.length > 0) {
-                [self compareBut:but xianText:selectValue zhuangText:model.Number_zhuang];
+            model[@"Number_3"] = selectValue;
+            if ([model[@"Number_zhuang"] length] > 0) {
+                [self compareBut:but xianText:selectValue zhuangText:model[@"Number_zhuang"]];
             }
         }else if (but.tag == 4){
-            model.Number_4 = selectValue;
-            if (model.Number_zhuang.length > 0) {
-                [self compareBut:but xianText:selectValue zhuangText:model.Number_zhuang];
+            model[@"Number_4"] = selectValue;
+            if ([model[@"Number_zhuang"] length] > 0) {
+                [self compareBut:but xianText:selectValue zhuangText:model[@"Number_zhuang"]];
             }
         }else if (but.tag == 5){
-            model.Number_5 = selectValue;
-            if (model.Number_zhuang.length > 0) {
-                [self compareBut:but xianText:selectValue zhuangText:model.Number_zhuang];
+            model[@"Number_5"] = selectValue;
+            if ([model[@"Number_zhuang"] length] > 0) {
+                [self compareBut:but xianText:selectValue zhuangText:model[@"Number_zhuang"]];
             }
         }else if (but.tag == 6){
-            model.Number_6 = selectValue;
+            model[@"Number_6"] = selectValue;
         }else if (but.tag == 7){
-            model.Number_zhuang = selectValue;
-            NSLog(@"000000_%@",model.Number_zhuang);
-            [self compareBut:cell.firstBut xianText:model.Number_1 zhuangText:model.Number_zhuang];
-            [self compareBut:cell.secondBut xianText:model.Number_2 zhuangText:model.Number_zhuang];
-            [self compareBut:cell.thirdBut xianText:model.Number_3 zhuangText:model.Number_zhuang];
-            [self compareBut:cell.forthBut xianText:model.Number_4 zhuangText:model.Number_zhuang];
-            [self compareBut:cell.fifthBut xianText:model.Number_5 zhuangText:model.Number_zhuang];
+            model[@"Number_zhuang"] = selectValue;
+            NSLog(@"000000_%@",model[@"Number_zhuang"]);
+            [self compareBut:cell.firstBut xianText:model[@"Number_1"] zhuangText:model[@"Number_zhuang"]];
+            [self compareBut:cell.secondBut xianText:model[@"Number_2"] zhuangText:model[@"Number_zhuang"]];
+            [self compareBut:cell.thirdBut xianText:model[@"Number_3"] zhuangText:model[@"Number_zhuang"]];
+            [self compareBut:cell.forthBut xianText:model[@"Number_4"] zhuangText:model[@"Number_zhuang"]];
+            [self compareBut:cell.fifthBut xianText:model[@"Number_5"] zhuangText:model[@"Number_zhuang"]];
             
         }
         
         [self.rootTableView reloadData];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"fff" object:self.modelArr];
     }];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"fff" object:self.modelArr];
 }
 
 - (void)compareBut:(UIButton *)but xianText:(NSString *)xianText zhuangText:(NSString *)zhuangText
